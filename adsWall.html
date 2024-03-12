@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Manhwa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="style.css">
+
+
+    </head>
+    <body class="font-myFontFamily w-full p-0 m-0 bg-gray-200 xl:text-xl">
+
+
+
+
+
+
+
+
+      
+      
+
+
+      <section class="w-[90%] py-20 mx-auto text-sm md:text-base lg:text-lg  relative" style="height: 100vh;">
+
+        <h1 class="text-base text-center sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-semibold uppercase border-b-2 border-main"><i class="bx bx-coin-stack  text-main"></i> ADS Wall <i class="bx bx-coin-stack  text-main"></i></h1>
+        <div class="w-11/12 sm:w-10/12 md:w-2/3 lg:w-3/5 mx-auto my-10">
+            <img src="images/ads.png" class="w-full my-4" alt="">
+            <img src="images/ads.png" class="w-full my-4" alt="">
+            <p class=" bg-black p-2 my-4  text-white text-center w-full mx-auto">5 seconds remaining</p>
+            <img src="images/ads.png" class="w-full my-4" alt="">
+            <img src="images/ads.png" class="w-full my-4" alt="">
+        </div>
+
+      </section>
+      
+
+    </body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+
+            colors: {
+                main: '#FF9000 ',
+                myRed: '#DC2626 ',
+            },
+            fontFamily: {
+              myFontFamily: ['Ubuntu', 'sans-serif'],
+            },
+
+          },
+        },
+      };
+    </script>
+  
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000, // Set your preferred delay
+            disableOnInteraction: false,
+        },
+        speed: 1000, // Set the speed for the transition between slides in milliseconds
+        pagination: {
+        el: '.swiper-pagination',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
+
+
+
+</html>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Manhwa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="style.css">
+
+
+    </head>
+    <body class="font-myFontFamily w-full p-0 m-0 bg-gray-200 xl:text-xl">
+
+
+        <script>
+            let lastScrollTop = 0;
+        
+            window.addEventListener("scroll", function() {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+                if (currentScroll > lastScrollTop) {
+                    // Scroll down
+                    document.getElementById("navbar").style.top = "-100px";
+                    document.getElementById("bottomNav").style.bottom = "-100px";
+                } else {
+                    // Scroll up
+                    document.getElementById("navbar").style.top = "0";
+                    document.getElementById("bottomNav").style.bottom = "0";
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+            });
+        </script>
+        <!-- navbar -->
+        <nav id="navbar" class="bg-gradient-to-bl from-black to-gray-900 rounded-b-xl overflow-hidden duration-700 backdrop-blur-md h-20 sticky top-0 z-20 text-white  flex items-center md:px-4 lg:px-8 w-full justify-between shadow-lg shadow-black/30">
+            <div class="flex items-center md:justify-normal justify-between w-full">
+                <a href="index.html"><img src="images/main_logo.png" class="h-14 min-w-14 mr-6  md:mr-2 lg:mr-4 xl:mr-12 2xl:mr-16" alt="logo"></a>
+                <div class="checkbox-wrapper-41 flex-col-reverse flex scale-75 md:scale-100 -ml-10 md:-ml-0 md:mr-2 lg:mr-4 xl:mr-12 2xl:mr-16">
+                    <input type="checkbox">
+                    <p class="text-main self-end text-xs md:text-sm">18+</p>
+        
+                </div>
+                                            
+                <div class="input-wrapper ml-5 hidden md:flex items-center justify-center gap-3 relative">
+                    <button class="icon flex outline-none border-none rounded-full bg-black/0 duration-700 items-center justify-center absolute right-0 cursor-pointer"> 
+                        <i class="bx bx-search text-gray-900 md:text-xl xl:text-2xl mx-3"></i>
+                    </button>
+                    <input placeholder="Search by name" class="text-main input text-xs sm:text-sm lg:text-base rounded-full pr-10 text-black-in-out bg-main/80  border-none w-10 h-10 outline-none p-2 duration-1000"  type="search">
+                </div>
+
+                <div class="flex w-fit md:hidden">
+                    <input type="search" placeholder="Search..." name="" id="" class=" text-xs text-main bg-transparent w-48 sm:w-68  rounded-lg focus:outline-none px-4 py-1.5" style="box-shadow: 0 0 10px hsla(34, 100%, 50%, 0.3);">
+                </div>
+
+
+                <div class="w-10 md:hidden rounded-full flex relative mx-2">
+                    <i class="bx bxs-bell bx-flashing text-myRed rounded-full absolute -top-2 -right-2 text-xl "></i>
+
+                    <a href="account.html"><img src="images/pfp.jpg" class="w-full active:scale-75 duration-300 rounded-full" alt=""></a>
+
+                </div>
+                <!-- <a href="account.html">
+                    <i class="bx bxs-user-circle md:hidden text-4xl sm:text-5xl  mx-3 hover:text-main duration-300 active:text-white relative">
+                        <i class="bx bxs-bell bx-tada text-myRed  w-7 h-7 text-center rounded-full absolute -top-2 sm:-top-1 text-xl sm:text-2xl -right-2"></i>
+                    </i>
+                </a> -->
+
+            </div>
+
+
+
+        <!-- css for search bar -->
+
+        <style>
+    
+            .input::placeholder,
+            .input {
+            border-radius: 20px;
+            }
+
+
+            .icon:focus ~ .input,
+            .input:focus {
+            box-shadow: 0 0 15px hsla(34, 100%, 50%, 0.5);
+            width: 170px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+            }
+
+            /* Remove default clear button icon */
+            input[type="search"]::-webkit-search-cancel-button {
+            display: none;
+            }
+            
+            @media (min-width: 800px) {
+                .icon:focus ~ .input,
+                .input:focus {
+                width: 200px;
+
+                }
+            }
+
+            @media (min-width: 850px) {
+                .icon:focus ~ .input,
+                .input:focus {
+                width: 240px;
+
+                }
+            }
+
+            @media (min-width: 1100px) {
+            .icon:focus ~ .input,
+            .input:focus {
+            width: 290px;
+
+                }
+            }
+            @media (min-width: 1400px) {
+            .icon:focus ~ .input,
+            .input:focus {
+            width: 330px;
+
+                }
+            }
+
+            
+
+
+
+
+
+        </style>
+            
+
+
+            <div class="min-w-1/3 flex items-center  justify-between uppercase">
+                <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="index.html">Home</a>
+                <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="genre.html">Genres</a>
+                <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="allManhwa.html">Posts</a>
+                <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="collaborations.html">Collaborations</a>
+                <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="about.html">About</a>
+
+                <div class="flex">
+
+                    
+
+
+                <div class="w-12 rounded-full md:flex relative hidden ml-2 lg:ml-4">
+                    <i class="bx bxs-bell bx-flashing text-myRed rounded-full absolute -top-3 -right-3 text-3xl "></i>
+
+                    <a href="account.html"><img src="images/pfp.jpg" class="w-full active:scale-75 duration-300 rounded-full" alt=""></a>
+
+                </div>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+
+
+      
+      
+
+
+    <section class="w-[96%] py-5  mx-auto text-sm md:text-base lg:text-lg relative">
+
+        <div class="w-full bg-gray-900 text-gray-200 rounded-lg" style="box-shadow: 0 0 10px rgba(0, 0, 0);">
+            <div class="flex justify-between w-full relative z-0">
+                <img src="images/soloLv.jpg" class="w-[34%] sm:w-[35%] md:w-[30%] lg:w-[26%]  rounded-tl-lg" alt="">
+                <img src="images/main_logo2.png" class="absolute opacity-25 w-1/3 right-0  -z-10" alt="">
+                <div class="flex flex-col justify-between  items-center text-xl text-center w-[66%] sm:w-[65%] md:w-[70%] lg:w-[74] p-2 sm:p-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
+                    <h1 class="font-semibold md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Solo Leveling  </h1>
+                    <div class="flex justify-center w-full flex-wrap text-xs sm:text-sm md:text-base ">
+                        <a href="#" class="rounded-sm -skew-x-3 ml-1 md:ml-2 xl:ml-3 2xl:ml-4  bg-main/80 px-1">#Action</a>
+                        <a href="#" class="rounded-sm -skew-x-3 ml-1 md:ml-2 xl:ml-3 2xl:ml-4  bg-main/80 px-1">#Supernatural</a>
+                    </div>
+                    <div class="flex flex-col text-center ">
+                        <h1 class="text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-3xl tracking-wider ">---Summary---</h1>
+                        <p class="text-[11px] sm:text-xs md:text-sm xl:text-base 2xl:text-xl leading-4 md:leading-normal text-justify md:px-6 bg-white/0 backdrop-blur-sm md:p-3 lg:px-10 xl:px-16 2xl:px-20">
+                            အစွမ်းထက်မိစ္ဆာကောင်တွေရဲ့ မျိုးပြုတ်သုတ်သင်ခြင်း မခံရဖို့အတွက် မှော်အစွမ်းတွေကို အသုံးပြုနိုင်တဲ့ Hunterလို့ သိကြတဲ့လူတန်းစားတစ်ရပ် ပေါ်ထွက်ခဲ့ရာ အားအနည်းဆုံး Hunter တစ်ဦးဖြစ်တဲ့ Sung Jinwooတစ်ယောက် ဂူတစ်ဂူထဲကိုရောက်မိပြီး တစ်ယောက်ထဲကျန်ခဲ့ချိန် ရှင်သန်နိုင်ဖို့အတွက် အဆုံးမသတ်နိုင်တဲ့ ရုန်းကန်မှုတွေနဲ့အတူ ဘယ်လိုမျိုးပြောင်းလဲလာမလဲဆိုတာ.....
+                        </p>
+                    </div>
+                    <p class="text-xs md:text-sm xl:text-base 2xl:text-lg self-end sm:mb-4">Translated by - <span class="border-b-[1px] hover:tracking-widest duration-200 hover:text-main active:text-black  tracking-wider border-main"><a href="#">Zeltronkylss</a></span></p>
+                    <div class="w-full flex-wrap h-fit hidden text-black sm:flex lg:border-t-2 border-dotted border-black/60 my-4 2xl:my-0 bg-black/0 py-4 px-2 justify-between items-center" >
+                        <p><i class="bx bx-play text-xs md:text-sm lg:text-base 2xl:text-lg bg-main/90 p-1 rounded-md -skew-x-3 shadow-md shadow-black/50 active:bg-black active:text-white hover:bg-main hover:tracking-wider duration-300 font-bold cursor-pointer">Read Now</i></p>
+                        <p class="text-sm  md:text-base xl:text-lg text-white"><i class="bx bx-street-view"> 1638</i></p>
+                        <p><i class="bx bx-bookmark text-xs md:text-sm lg:text-base 2xl:text-lg bg-blue-300 p-1 rounded-md -skew-x-3 shadow-md shadow-blue-800/50 active:bg-black active:text-white hover:tracking-wider hover:bg-blue-400 duration-300 font-bold cursor-pointer">Add to Bookmark</i></p>
+                        <!-- <p><i class="bx bx-sort md:hidden text-xs md:text-sm lg:text-base 2xl:text-lg bg-gray-300 p-1 rounded-md -skew-x-3 shadow-md shadow-black/50 active:bg-black active:text-white md:hover:bg-gray-400 hover:tracking-wider duration-300 font-bold"></i></p> -->
+                        <!-- <p><i class="bx bx-sort hidden md:block text-xs md:text-sm lg:text-base 2xl:text-lg bg-gray-300 p-1 rounded-md -skew-x-3 shadow-md shadow-black/50 active:bg-black active:text-white md:hover:bg-gray-400 hover:tracking-wider duration-300 font-bold">Sort Chapters</i></p> -->
+                        <h1 class="w-1/2 mr-[50%] text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-3xl tracking-widest border-white/80 my-4 text-start uppercase text-white 2xl:block hidden">Chapters</h1>
+
+                        <div class="relative w-full hidden 2xl:flex flex-wrap justify-around overflow-y-auto h-52 md:h-60 lg:h-68 2xl:h-80 -z-0 py-4 rounded-lg my-2 2xl:my-0" style="box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.7), 0 0 12px #ff9000 ;">
+                            <!-- <img src="images/main_logo2.png" class="absolute right-0 top-0 blur-sm opacity-20 w-2/3 -z-10" alt=""> -->
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] lg h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 45 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 44 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 43 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 42 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 41 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 40 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 39 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 09 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 08 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 07 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 06 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 05 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 04 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 03 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 02 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 01 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                            <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 00 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+
+            <div class="w-full flex flex-col  bg-gray-900 p-2 py-4 2xl:py-0 text-gray-900">
+                <div class="w-full h-fit flex sm:hidden mb-2 justify-between items-center" >
+                    <p><i class="bx bx-play text-xs bg-main/90 p-1 rounded-md -skew-x-3 shadow-md shadow-black/50 active:bg-black active:text-white hover:bg-main hover:tracking-wider duration-300 font-bold">Read Now</i></p>
+                    <p class="text-sm md:text-base xl:text-lg text-white"><i class="bx bx-street-view"> 1638</i></p>
+                    <p><i class="bx bx-bookmark text-xs bg-blue-300 p-1 rounded-md -skew-x-3 shadow-md shadow-blue-800/50 active:bg-black active:text-white hover:tracking-wider hover:bg-blue-400 duration-300 font-bold">Add to Bookmark</i></p>
+                    <!-- <p><i class="bx bx-sort text-xs bg-gray-300 p-1 rounded-md -skew-x-3 shadow-md shadow-black/50 active:bg-black active:text-white md:hover:bg-gray-400 hover:tracking-wider duration-300 font-bold"></i></p> -->
+                </div>
+
+                <h1 class="w-1/2 mx-[25%] text-sm sm:text-base md:text-xl xl:text-2xl 2xl:text-3xl tracking-widest border-white/80 mb-4 text-center uppercase text-white 2xl:hidden">Chapters</h1>
+
+                <div class="relative  flex 2xl:hidden flex-wrap justify-around overflow-y-auto h-52 md:h-60 lg:h-68 xl:h-80 2xl:h-96 -z-0 py-8 rounded-lg my-2" style="box-shadow: 0 0 10px rgba(0, 0, 0, 1) ;">
+                    <!-- style="box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.7), 0 0 12px #ff9000 ;" -->
+                    <!-- <img src="images/main_logo2.png" class="absolute right-0 top-0 blur-sm opacity-20 w-2/3 -z-10" alt=""> -->
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 45 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 44 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 43 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 42 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 41 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 40 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 39 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 09 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 08 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 07 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 06 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 05 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 04 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 03 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 02 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 01 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+                    <a href="postView.html" class="font-semibold hover:tracking-wider w-[48.5%] lg:w-[32%] h-fit bg-gray-300 duration-300 hover:bg-main text-black active:bg-white p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 00 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+
+                </div>
+
+
+            </div>
+
+            <!-- COMMENTS -->
+
+
+    
+            <div class="w-full flex flex-wrap bg-black/30 rounded-b-lg px-0 py-4 justify-center border-t-2 border-main/50 items-center" >
+                <h1 class="w-1/2 mx-[25%] text-sm sm:text-sm md:text-lg xl:text-xl 2xl:text-2xl tracking-widest border-white/80 mb-4 text-center uppercase text-white ">Comments</h1>
+
+                
+                <input type="text" name="comment" id="commentInput" placeholder="Write comment..." class="p-2  mr-2 text-main focus:outline-none my-2 bg-black/50 shadow-md shadow-main/30 rounded-lg w-3/5">
+                <button id="sendButton" class="w-[10%] md:w-[9%] xl:w-[6%] mr-5 md:mr-7 xl:mr-10" disabled><i class="bx bx-send w-full p-2 py-3 rounded-lg text-center bg-gray-400 hover:bg-gray-600 active:bg-black active:text-white duration-300 shadow-md shadow-main/30 opacity-30 text-black font-bold"></i></button>
+                <button class="w-[10%] md:w-[9%] xl:w-[8%]  mr-2"><i class="bx bx-share bx-flip-horizontal w-full p-2 py-3 rounded-lg text-center bg-gray-400 md:hover:bg-gray-600 active:bg-black active:text-white duration-300 shadow-md shadow-main/30  text-black font-bold "></i></button>
+                <button id="commentButton" class="w-[10%] md:w-[9%] xl:w-[8%] relative">
+                    <i class="bx bx-comment-detail w-full p- py-3 rounded-lg text-center bg-gray-400 hover:bg-gray-600 active:bg-black active:text-white duration-300 shadow-md shadow-main/30 text-black font-bold"></i>
+                    <span class="absolute bottom-0 lg:bottom-1 right-0 text-black text-xs md:text-sm xl:text-base">99+ </span>
+                </button>
+
+            </div>
+
+            <div id="commentSection" class="fixed text-gray-200 overflow-y-auto bottom-0 left-0 w-full h-0 sm:px-[8%] 2xl:px-[12%] bg-gray-900 overflow-hidden duration-300 transition-height z-20" style="box-shadow: 0 0 200px rgb(0, 0, 0), 0 0 200px rgb(0, 0, 0);">
+                <button id="closeButton" class="absolute hidden top-0 right-0 m-4 text-gray-600 hover:text-black focus:outline-none">
+                    <i class="bx bx-x p-2 bg-gray-100"></i>
+                </button>
+                <h1 class="text-xl m-3 mb-6 border-b-2 border-main/50 mt-4 md:mt-8">Comments</h1>
+                <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
+                    <img src="/images/ekYoe.jpg" class="w-12 h-12 rounded-xl " alt="">
+                    <div class="flex flex-col flex-1 px-3">
+                        <div class="flex justify-between w-full mb-1">
+                            <p class="font-semibold tracking-widest">Ek Yoe</p>
+                            <p class="font-thin opacity-70">8hr ago</p>
+                        </div>
+                        <p class="opacity-90">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem temporibus voluptate eum suscipit fugit!
+                        </p>
+                        <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a>
+                        <!-- Hidden form for replies -->
+                        <div class="hidden reply-form  w-full flex-col">
+                            <div class="flex flex-col w-full">
+                                <div class="flex shadow-md shadow-main/30 rounded-lg mb-3 p-1">
+                                    <img src="/images/zeltron.jpg" class="w-12 h-12 rounded-xl " alt="">
+                                    <div class="flex flex-col flex-1 px-3">
+                                        <div class="flex justify-between w-full mb-1">
+                                            <p class="font-semibold tracking-widest">zeltron</p>
+                                            <p class="font-thin opacity-70">8hr ago</p>
+                                        </div>
+                                        <p class="opacity-90">
+                                            Lorem ipsum dolor sit amet ibus voluptate eum suscipit fugit!
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="flex shadow-md shadow-main/30 rounded-lg mb-3 p-1">
+                                    <img src="/images/gray.jpg" class="w-12 h-12 rounded-xl " alt="">
+                                    <div class="flex flex-col flex-1 px-3">
+                                        <div class="flex justify-between w-full mb-1">
+                                            <p class="font-semibold tracking-widest">Gray</p>
+                                            <p class="font-thin opacity-70">8hr ago</p>
+                                        </div>
+                                        <p class="opacity-90">
+                                            Lorem ipsu fugit!
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="w-full flex bg-gray-900 px-2 justify-center">
+                                    <input type="text" name="comment" id="commentInputR" placeholder="Write comment..." class="p-2  mr-2 text-main focus:outline-none my-2 bg-transparent shadow-md shadow-main/50 rounded-lg w-4/5">
+                                    <button id="sendButtonR" class="w-1/5 mr-5" disabled><i class="bx bx-send w-full p-2 py-3 rounded-lg text-center bg-gray-400 hover:bg-gray-600 active:bg-black active:text-white duration-300 shadow-md shadow-main/30 opacity-30"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full pb-32">
+                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
+                        <img src="/images/zeltron.jpg" class="w-12 h-12 rounded-xl " alt="">
+                        <div class="flex flex-col flex-1 px-3">
+                            <div class="flex justify-between w-full mb-1">
+                                <p class="font-semibold tracking-widest">Zeltron</p>
+                                <p class="font-thin opacity-70">8hr ago</p>
+                            </div>
+                            <p class="opacity-90">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem temporibus voluptate eum suscipit fugit!
+                            </p>
+                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
+    
+                        </div>
+                    </div>
+    
+                    
+                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
+                        <img src="/images/pfp.jpg" class="w-12 h-12 rounded-xl " alt="">
+                        <div class="flex flex-col flex-1 px-3">
+                            <div class="flex justify-between w-full mb-1">
+                                <p class="font-semibold tracking-widest">Tanjiro Kamado</p>
+                                <p class="font-thin opacity-70">2w ago</p>
+                            </div>
+                            <p class="opacity-90">
+                                Lorem ipsum dolor sit amet consect temporibus voluptate eum suscipit fugit!
+                            </p>
+                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
+    
+                        </div>
+                    </div>
+    
+                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
+                        <img src="/images/naingMin.jpg" class="w-12 h-12 rounded-xl " alt="">
+                        <div class="flex flex-col flex-1 px-3">
+                            <div class="flex justify-between w-full mb-1">
+                                <p class="font-semibold tracking-widest">Naing Min</p>
+                                <p class="font-thin opacity-70">2w ago</p>
+                            </div>
+                            <p class="opacity-90">
+                                Lorem ipsum dolor sit amet consect temporibus voluptate eum suscipit fugit!
+                            </p>
+                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
+    
+                        </div>
+                    </div>
+
+                </div>
+
+
+            
+
+            <!-- comment functions -->
+            <script>
+                const commentInput = document.getElementById('commentInput');
+                const commentInputR = document.getElementById('commentInputR');
+                const sendButton = document.getElementById('sendButton');
+                const sendButtonR = document.getElementById('sendButtonR');
+              
+                commentInput.addEventListener('input', function() {
+                    if (commentInput.value.trim() !== '') {
+                        sendButton.querySelector('i').classList.remove('opacity-30');
+                        sendButton.removeAttribute('disabled');
+                    } else {
+                        sendButton.querySelector('i').classList.add('opacity-30');
+                        sendButton.setAttribute('disabled', 'disabled');
+                    }
+                });
+            
+                commentInputR.addEventListener('input', function() {
+                    if (commentInputR.value.trim() !== '') {
+                        sendButtonR.querySelector('i').classList.remove('opacity-30');
+                        sendButtonR.removeAttribute('disabled');
+                    } else {
+                        sendButtonR.querySelector('i').classList.add('opacity-30');
+                        sendButtonR.setAttribute('disabled', 'disabled');
+                    }
+                });
+            </script>
+            
+
+            <script>
+                const commentButton = document.getElementById('commentButton');
+                const commentSection = document.getElementById('commentSection');
+                const closeButton = document.getElementById('closeButton');
+                const body = document.body;
+
+                commentButton.addEventListener('click', function(event) {
+                    if (commentSection.clientHeight === 0) {
+                        commentSection.style.height = '75vh'; // Show the comment section
+                        body.classList.add('overflow-hidden'); // Disable scrolling on the background section
+                    } else {
+                        commentSection.style.height = '0'; // Hide the comment section
+                        body.classList.remove('overflow-hidden'); // Enable scrolling on the background section
+                    }
+                    event.stopPropagation(); // Prevent the click event from propagating to the document
+                });
+
+                closeButton.addEventListener('click', function() {
+                    commentSection.style.height = '0'; // Hide the comment section when close button is clicked
+                    body.classList.remove('overflow-hidden'); // Enable scrolling on the background section
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!commentSection.contains(event.target) && commentSection.clientHeight !== 0) {
+                        commentSection.style.height = '0'; // Close the comment section if the click is outside of it
+                        body.classList.remove('overflow-hidden'); // Enable scrolling on the background section
+                    }
+                });
+            </script>
+
+            <script>
+                const viewRepliesLinks = document.querySelectorAll('.view-replies');
+
+                viewRepliesLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const replyForm = this.parentElement.querySelector('.reply-form');
+                        replyForm.classList.toggle('hidden');
+                        // Change the link text to "Close" when the form is visible, and "View 6 replies" otherwise
+                        this.textContent = replyForm.classList.contains('hidden') ? 'View replies' : 'Hide replies';
+                    });
+                });
+            </script>
+
+  
+            
+
+
+
+
+
+            </div>
+        </div>
+
+
+            <!-- ads -->
+            <img src="images/ads.png" class="w-full md:w-[85%] lg:w-[80%] xl:w-[70%] mx-auto my-6" alt="">   
+            
+            
+            <!-- Related Posts -->
+            <div class="w-full relative text-center h-fit">
+                <img src="images/main_logo2.png" class="right-0 bottom-0 w-10 absolute" alt="">
+    
+                <h1 class="text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-semibold text-start border-b-2 border-main uppercase"><i class="bx bxs-star"></i> Related posts</h1>
+            </div>
+    
+    
+            <div class="w-full h-fit px-2 mb-6 justify-around flex my-6 flex-col ">
+    
+    
+                <div  class="min-w-full w-fit h-full justify-around p-2 flex flex-wrap gap-5 md:gap-8 xl:gap-12">
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-emerald-500 p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">New</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <img src="images/newTown.png" class="h-full w-full rounded-lg" alt="">
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-main p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Premium Manga</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/desire.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-myRed p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Completed</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/waterOverflow.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-gray-600 p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Ongoing</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <img src="images/newTown.png" class="h-full w-full rounded-lg" alt="">
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-gray-600 p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Ongoing</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <img src="images/newTown.png" class="h-full w-full rounded-lg" alt="">
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-main p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Premium Manga</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/desire.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-gray-600 p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Ongoing</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/waterOverflow.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>  
+                    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-myRed p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Completed</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/desire.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-myRed p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Completed</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/waterOverflow.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+    
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+    </section>
+      
+      <!-- footer -->
+
+    <div class="w-full h-fit flex flex-col bg-gray-950 sm:px-2 md:px-4 lg:px-6 xl:px-10 pb-6 md:pb-1">
+        <img src="images/ads.png" class=" sm:mx-[5%] md:mx-[8%] lg:mx-[12%] xl:mx-[16%] 2xl:mx-[20%] shadow-md shadow-main/50" alt="">
+        <div class="flex w-full justify-around text-2xl sm:text-4xl py-3 md:py-5 lg:py-8">
+            <a href="https://www.facebook.com/zeltronscott?mibextid=ZbWKwL"><i class="text-gray-50  bx bxl-facebook-circle  duration-200 hover:text-blue-600"></i></a>
+            <h1 class="uppercase text-gray-50 font-semibold tracking-widest shadow-xl px-1 shadow-main/30 rounded-xl">NEXUS</h1>
+            <a href="https://t.me/zeltronkylss"><i class="bx bxl-telegram text-gray-50 duration-200 hover:text-blue-500 "></i></a>    
+
+        </div>
+        <div class="w-full justify-center items-center text-white flex flex-col sm:flex-row sm:justify-around md:justify-between pb-5 px-2">
+            <p class="hidden lg:block text-sm">Nexus Manga <i class="bx bx-copyright"> 2024</i></p>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Home</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Genre</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Posts</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Collabs</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Account</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">About</a>
+            <p class="hidden lg:block text-sm">Developed by Nexus</p>
+
+        </div>
+        <div class="w-full lg:hidden text-white flex pb-1 justify-around text-xs lg:text-sm md:justify-between">
+            <p>Nexus Manga <i class="bx bx-copyright"> 2024</i></p>
+            <p>Developed by Nexus</p>
+        </div>
+    </div>
+      
+
+
+  <!-- Navbar at bottom -->
+  <div id="bottomNav" class="bg-gradient-to-tr from-black to-gray-900 duration-700 backdrop-blur-md h-16 rounded-t-xl items-center fixed bottom-0  w-full text-white font-semibold md:hidden flex z-20 justify-around" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);">
+
+    <a href="index.html" class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-home'></i></a>
+
+    <a href="allManhwa.html" class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-category-alt'></i></a>
+
+    <a href="genre.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-palette'></i></a>
+
+    <a href="collaborations.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bx-unite'></i></a>
+
+    <a href="about.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-info-circle'></i></a>
+  </div>
+                                        
+
+
+
+    </body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+
+            colors: {
+                main: '#FF9000 ',
+                myRed: '#DC2626 ',
+            },
+            fontFamily: {
+              myFontFamily: ['Ubuntu', 'sans-serif'],
+            },
+
+          },
+        },
+      };
+    </script>
+  
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000, // Set your preferred delay
+            disableOnInteraction: false,
+        },
+        speed: 1000, // Set the speed for the transition between slides in milliseconds
+        pagination: {
+        el: '.swiper-pagination',
+        },
+
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
+    <style>
+
+        /* toggle 18+ switch */
+
+
+        .checkbox-wrapper-41 {
+        --size: 50px;
+        }
+
+        .checkbox-wrapper-41 input[type="checkbox"] {
+        -webkit-appearance: none;
+        width: var(--size);
+        height: calc(var(--size) / 2);
+        background-color: #000;
+        border: 2px solid #222;
+        border-radius: 10px 0 10px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        }
+
+        .checkbox-wrapper-41 input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        width: calc(var(--size) / 2);
+        height: calc(var(--size) / 2);
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) scale(0.7);
+        border: 3px solid #222;
+        border-radius: 50% 0 50% 0;
+        background-color: #FF9000;
+        box-sizing: border-box;
+        transition: all 0.3s;
+        }
+
+        .checkbox-wrapper-41 input[type="checkbox"]:checked {
+        background-color: #FF9000;
+        border-radius: 0 10px 0 10px;
+        }
+
+        .checkbox-wrapper-41 input[type="checkbox"]:checked::before {
+        left: 50%;
+        background-color: #000;
+        border-radius: 0 50% 0 50%;
+        }
+
+
+    </style>
+
+  
+  
+
+
+
+
+</html>

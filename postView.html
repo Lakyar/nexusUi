@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Manhwa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    
+
+    <link rel="stylesheet" href="style.css">
+
+
+    </head>
+    <body class="font-myFontFamily w-full p-0 m-0 bg-black text-white xl:text-xl ">
+
+
+        <script>
+            let lastScrollTop = 0;
+        
+            window.addEventListener("scroll", function() {
+                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+                if (currentScroll > lastScrollTop) {
+                    // Scroll down
+                    document.getElementById("navbar").style.top = "-100px";
+                    document.getElementById("bottomNav").style.bottom = "-100px";
+                } else {
+                    // Scroll up
+                    document.getElementById("navbar").style.top = "0";
+                    document.getElementById("bottomNav").style.bottom = "0";
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+            });
+        </script>
+      <!-- navbar -->
+      <nav id="navbar" class="bg-gradient-to-bl from-black to-gray-900 rounded-b-xl duration-700 backdrop-blur-md h-20 sticky top-0 z-20 text-white  flex items-center md:px-4 lg:px-8 w-full justify-between shadow-lg shadow-main/30 ">
+        <div class="flex items-center md:justify-normal justify-between w-full">
+            <a href="index.html"><img src="images/main_logo.png" class="h-14 min-w-14" alt="logo"></a>
+
+
+                                        
+            <div class="flex px-2 justify-around flex-1 items-center">
+                <div class="checkbox-wrapper-41 flex-col flex scale-[0.65] sm:scale-75 md:scale-90 2xl:scale-100">
+                    <p class="self-start text-sm md:text-base"><i class="bx bx-moon"></i></p>
+                    <input type="checkbox" id="themeToggle">
+                    <p class="self-end text-sm md:text-base"><i class="bx bx-sun"></i></p>
+                </div>
+                
+                
+                <p  id="showChapters" class="text-2xl md:text-3xl  xl:text-4xl items-center flex text-main/80 hover:text-main active:text-black duration-300 cursor-pointer"><i class='bx bx-list-ul'></i></p>
+                <p  id="showRp" class="text-2xl md:text-3xl xl:text-4xl items-center flex text-red-400 hover:text-red-500 active:text-black duration-300 cursor-pointer"><i class='bx bx-error-alt'></i></p>
+
+                
+                <div class="w-fit flex justify-center border-2 border-white/50  rounded-full">
+                    <a href="" class="text-2xl md:text-3xl xl:text-4xl items-center flex rounded-l-full p-1 bg-main/70 hover:bg-main active:bg-black duration-300 cursor-pointer shadow-md shadow-white/30 sm:px-1 md:px-2 lg:px-3 xl:px-4 2xl:px-5"><i class='bx bx-skip-previous'></i></a>
+                    <p class="p-1 bg-main/40 border-l-2 border-r-2 border-white/50 shadow-md shadow-white/30 sm:px-1 md:px-2 lg:px-3 xl:px-4 2xl:px-5 lg:hidden">Ch - 21</p>    
+                    <p class="p-1 bg-main/40 border-l-2 border-r-2 border-white/50 shadow-md shadow-white/30 sm:px-1 md:px-2 lg:px-3 xl:px-4 2xl:px-5 hidden lg:block">Chapter - 21</p>    
+                    <a href="" class="text-2xl items-center flex rounded-r-full p-1 bg-main/70 hover:bg-main active:bg-black duration-300 cursor-pointer shadow-md shadow-white/30 sm:px-1 md:px-2 lg:px-3 xl:px-4 2xl:px-5"><i class='bx bx-skip-next'></i></a>
+                </div>
+
+
+
+
+            </div>
+
+            
+
+
+
+            <div class="w-10 md:hidden rounded-full flex relative mr-2 ">
+                <i class="bx bxs-bell bx-flashing text-myRed rounded-full absolute -top-2 -right-2 text-xl "></i>
+
+                <a href="account.html"><img src="images/pfp.jpg" class="w-full active:scale-75 duration-300 rounded-full " alt=""></a>
+
+                
+
+            </div>
+
+
+        </div>
+
+
+
+        
+
+
+        <div class="min-w-1/3 flex items-center  justify-between uppercase">
+            <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="index.html">Home</a>
+            <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="genre.html">Genres</a>
+            <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="allManhwa.html">Posts</a>
+            <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="collaborations.html">Collaborations</a>
+            <a class="hidden mx-1.5 lg:mx-2 xl:mx-5 md:block text-sm lg:text-lg hover:text-main duration-300 active:text-white hover:tracking-widest" href="about.html">About</a>
+
+            <div class="flex">
+
+                
+
+
+            <div class="w-12 rounded-full md:flex relative hidden ml-2 lg:ml-4">
+                <i class="bx bxs-bell bx-flashing text-myRed rounded-full absolute -top-3 -right-3 text-3xl "></i>
+
+                <a href="account.html"><img src="images/pfp.jpg" class="w-full active:scale-75 duration-300 rounded-full" alt=""></a>
+
+            </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+      </nav>
+
+
+
+    <section class="w-full py-5  mx-auto text-sm md:text-base lg:text-lg  relative">
+
+
+<div id="rpDiv" style="transform: translateY(-100vh); transition: transform 0.5s ease-in-out; opacity: 1;" class="w-[100vw] h-[80vh] rounded-b-xl shadow-black shadow-2xl pt-24 xl:pt-28 px-[5%] sm:px-[10%] md:px-[15%] xl:px-[20%] border-b-4 border-white/50 top-0 left-0 bg-gray-900/50 backdrop-blur-md fixed">
+    <h1 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl border-b-2 border-main/50 mx-[4%] my-4 text-white"> <i class="bx bx-error-alt"></i> Report Form</h1>
+    <form class="relative bg-black/50 text-white  flex flex-wrap justify-normal overflow-y-auto z-10 p-[3%] md:px-[4%] lg:px-[6%] xl:px-[8%] 2xl:px-[10%]  sm:py-4 md:py-6 lg:py-8 2xl:py10 rounded-lg my-2 mx-2 sm:mx-4 md:mx-8 lg:mx-[5%] xl:mx-[10%] 2xl:mx-[14%]" style="box-shadow: 0 0 10px rgb(140, 140, 140) ; height: calc(100vh - 50vh);">
+        <p class=" text-gray-200 w-full -mb-10"> <i class="bx bx-bug text-main"></i> Reason </p>
+
+        <div class="w-[48%] xl:w-[30%] flex justify-center items-center">
+            <label for="" class="mr-3">Broken Imaged</label>
+            <input type="checkbox" class="" name="" id="">
+
+        </div>
+        <div class="w-[48%] xl:w-[30%] flex justify-center items-center">
+            <label for="" class="mr-3">Broken Imaged</label>
+            <input type="checkbox" class="" name="" id="">
+
+        </div>
+        <div class="w-[48%] xl:w-[30%] flex justify-center items-center">
+            <label for="" class="mr-3">Broken Imaged</label>
+            <input type="checkbox" class="" name="" id="">
+
+        </div>
+        <div class="w-[48%] xl:w-[30%] flex justify-center items-center">
+            <label for="" class="mr-3">Broken Imaged</label>
+            <input type="checkbox" class="" name="" id="">
+
+        </div>
+        <div class="w-[48%] xl:w-[30%] flex justify-center items-center">
+            <label for="" class="mr-3">Broken Imaged</label>
+            <input type="checkbox" class="" name="" id="">
+
+        </div>
+        
+
+        <p class=" text-gray-200 w-full mt-4"> <i class="bx bx-message-detail text-main"></i> Message </p>
+        <textarea type="text" class=" w-full text-base h-28 mb-5 p-2 bg-white/5 backdrop-blur-sm rounded-md shadow-md shadow-main/20 outline-none" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi!"></textarea> 
+    </form>
+</div>
+
+
+<div id="chaptersDiv" style="transform: translateX(-100vw); transition: transform 0.5s;  " class="w-[80vw] sm:w-[70%] md:w-[80%] h-[100vh] rounded-r-2xl px-4 shadow-black shadow-2xl pt-24 top-0 left-0 bg-black/70 border-r-4 border-white/50 backdrop-blur-md fixed">
+    <h1 class="text-lg md:text-xl lg:text-xl 2xl:text-3xl border-b-2 border-main/50 mx-[4%] my-4 text-white">  <i class="bx bx-list-ul"></i>Chapters</h1>
+
+    <div class="relative hidden md:flex flex-wrap justify-around overflow-y-auto z-10  py-2 sm:py-4 md:py-6 lg:py-8 2xl:py10 rounded-lg my-2 mx-2 sm:mx-4 md:mx-8 lg:mx-[5%] xl:mx-[10%] 2xl:mx-[14%]" style="box-shadow: 0 0 10px rgb(140, 140, 140) ; height: calc(100vh - 40vh);  ">
+
+        <!-- style="box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.7), 0 0 12px #ff9000 ;" -->
+        <!-- <img src="images/main_logo2.png" class="absolute right-0 top-0 blur-sm opacity-20 w-2/3 -z-10" alt=""> -->
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 45 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 44 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 43 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 42 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 41 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 40 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 39 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 09 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 08 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 07 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 06 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 05 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 04 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 03 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 02 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 01 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Chapter - 00 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+
+    </div>
+
+    <div class="relative md:hidden flex  flex-wrap justify-around overflow-y-auto z-10  py-2 sm:py-4 md:py-6 lg:py-8 2xl:py10 rounded-lg my-2 mx-2 sm:mx-4 md:mx-8 lg:mx-[5%] xl:mx-[10%] 2xl:mx-[14%]" style="box-shadow: 0 0 10px rgb(140, 140, 140) ; height: calc(100vh - 40vh);  ">
+
+        <!-- style="box-shadow: 0 0 5px hsla(0, 0%, 100%, 0.7), 0 0 12px #ff9000 ;" -->
+        <!-- <img src="images/main_logo2.png" class="absolute right-0 top-0 blur-sm opacity-20 w-2/3 -z-10" alt=""> -->
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 45 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 44 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 43 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 42 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 41 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 40 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 39 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 38 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 10 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 09 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 08 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 07 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 06 <span class="border-[1px] border-main bg-gray-900 text-main text-[11px] font-thin rounded-full px-2 py-1">Premium</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 05 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 04 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 03 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 02 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 01 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+        <a href="#" class="font-semibold hover:tracking-wider w-[32%] lg:w-[24%] h-fit chapter bg-gray-300 duration-300 hover:bg-main text-gray-900  active:bg-white shadow-md shadow-main/60 p-0.5 py-1.5 rounded-md mb-3 text-center">Ch - 00 <span class="border-[1px] border-emerald-900 bg-emerald-800 text-emerald-300 text-[11px] font-thin rounded-full px-4 py-1">Free</span></a>
+
+    </div>
+</div>
+
+
+    
+
+        <h1 class="text-lg md:text-xl lg:text-2xl 2xl:text-3xl border-b-2 border-main/50 mx-[4%] my-4">Solo Leveling - Chapter - 21</h1>
+
+  
+        <img src="images/ads.png" class="my-6 sm:shadow-md sm:shadow-main/30 mx-auto w-full sm:w-[75%]  max-w-[2000px]" alt="">
+
+        <div class="w-[94%] sm:w-[86%] md:w-[76%] lg:w-[66%] xl:w-[50%] 2xl:w-[50%] mx-auto max-w-[1500px]">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+            <img src="images/soloLvpng.png" class="w-full" alt="">
+        </div>
+
+        <img src="images/ads.png" class="my-6 sm:shadow-md sm:shadow-main/30 mx-auto w-full sm:w-[75%]  max-w-[2000px]" alt="">
+
+
+        
+        <div class="w-full flex justify-around my-4">
+            <a class=" w-1/3 md:w-1/4  my-4 skew-x-0 text-lg  hover:tracking-widest hover:shadow-lg hover:shadow-main/30 shadow-sm rounded-md shadow-main/30 duration-300 active:scale-75 active:bg-black bg-main/80 flex items-center justify-center"><i class="bx bx-skip-previous text-2xl"></i>Ch - 20</a>
+            <a class=" w-1/3 md:w-1/4  my-4 -skew-x-0 text-lg  hover:tracking-widest hover:shadow-lg hover:shadow-main/30 shadow-sm rounded-md shadow-main/30 duration-300 active:scale-75 active:bg-black bg-main/80 flex items-center justify-center">Ch - 22<i class="bx bx-skip-next text-2xl"></i></a>
+        </div>
+
+
+
+
+
+            <!-- Related Posts -->
+            <div class="w-[96%] mx-auto relative text-center h-fit">
+                <img src="images/main_logo2.png" class="right-0 bottom-0 w-10 absolute" alt="">
+    
+                <h1 class="text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-semibold text-start border-b-2 border-main uppercase"><i class="bx bxs-star"></i> Related posts</h1>
+            </div>
+
+
+            <div class="w-[96%] mx-auto h-fit px-2 mb-6 justify-around flex my-6 flex-col ">
+    
+    
+                <div  class="min-w-full w-fit h-full justify-around p-2 flex flex-wrap gap-5 md:gap-8 xl:gap-12">
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-emerald-500 p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">New</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <img src="images/newTown.png" class="h-full w-full rounded-lg" alt="">
+                        </div>
+
+                    </div>
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-main p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Premium Manga</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/desire.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+
+    
+                    <div class="w-36 md:w-44 lg:w-48 xl:w-56 2xl:w-64 mx-1 md:mx-4 xl:mx-6 2xl:mx-8 bg-black/90 text-white h-full flex flex-col rounded-lg duration-300  md:hover:scale-95 relative shadow-black/60 shadow-lg">
+                        <p class="absolute bg-myRed p-1 px-2 md:px-4 text-xs lg-text-sm 2xl:text-base -top-2 -left-2 md:-left-3 lg:-left-4 rounded-full z-10">Completed</p>
+                        <div class="w-full rounded-lg h-[200px] md:h-[230px] lg:h-[250px] xl:h-[300px] relative">
+    
+                            <div class="absolute bottom-1 right-1 flex flex-col items-end">
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit mb-1 self-end"><i class='bx bx-street-view' ></i>76543 </p>
+                                    
+                                <p class="text-xs rounded-full bg-black/50 backdrop-blur-md p-1 w-fit"><i class='bx bx-time-five' ></i> 8months ago</p>
+                            </div>
+    
+    
+                            <a href="chapters.html"><img src="images/waterOverflow.png" class="h-full w-full rounded-lg" alt=""></a>
+                        </div>
+
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+    
+
+            
+      </section>
+      
+    <!-- footer -->
+
+    <div class="w-full h-fit flex flex-col bg-gray-950 sm:px-2 md:px-4 lg:px-6 xl:px-10 pb-6 md:pb-1">
+        <img src="images/ads.png" class=" sm:mx-[5%] md:mx-[8%] lg:mx-[12%] xl:mx-[16%] 2xl:mx-[20%] shadow-md shadow-main/50" alt="">
+        <div class="flex w-full justify-around text-2xl sm:text-4xl py-3 md:py-5 lg:py-8">
+            <a href="https://www.facebook.com/zeltronscott?mibextid=ZbWKwL"><i class="text-gray-50  bx bxl-facebook-circle  duration-200 hover:text-blue-600"></i></a>
+            <h1 class="uppercase text-gray-50 font-semibold tracking-widest shadow-xl px-1 shadow-main/30 rounded-xl">NEXUS</h1>
+            <a href="https://t.me/zeltronkylss"><i class="bx bxl-telegram text-gray-50 duration-200 hover:text-blue-500 "></i></a>    
+
+        </div>
+        <div class="w-full justify-center items-center text-white flex flex-col sm:flex-row sm:justify-around md:justify-between pb-5 px-2">
+            <p class="hidden lg:block text-sm">Nexus Manga <i class="bx bx-copyright"> 2024</i></p>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Home</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Genre</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Posts</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Collabs</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">Account</a>
+            <a href="index.html" class="border-b-2 border-main/50 tracking-widest hover:tracking-normal duration-300 active:text-black">About</a>
+            <p class="hidden lg:block text-sm">Developed by Nexus</p>
+
+        </div>
+        <div class="w-full lg:hidden text-white flex pb-1 justify-around text-xs lg:text-sm md:justify-between">
+            <p>Nexus Manga <i class="bx bx-copyright"> 2024</i></p>
+            <p>Developed by Nexus</p>
+        </div>
+    </div>
+
+
+  <!-- Navbar at bottom -->
+  <div id="bottomNav" class="bg-gradient-to-tr from-black to-gray-900 duration-700 backdrop-blur-md h-16 rounded-t-xl items-center fixed bottom-0  w-full text-white font-semibold md:hidden flex z-20 justify-around" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);">
+
+    <a href="index.html" class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-home'></i></a>
+
+    <a href="allManhwa.html" class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-category-alt'></i></a>
+
+    <a href="genre.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-palette'></i></a>
+
+    <a href="collaborations.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bx-unite'></i></a>
+
+    <a href="about.html"  class="active:scale-75 duration-100 text-black text-2xl" ><i class='text-main/75 bx bxs-info-circle'></i></a>
+  </div>
+                                        
+
+
+
+    </body>
+
+
+
+
+
+<script>
+    tailwind.config = {
+    theme: {
+        extend: {
+
+        colors: {
+            main: '#FF9000 ',
+            myRed: '#DC2626 ',
+        },
+        fontFamily: {
+            myFontFamily: ['Ubuntu', 'sans-serif'],
+        },
+
+        },
+    },
+    };
+</script>
+
+
+<!-- report form -->
+<script>
+    document.getElementById('showRp').addEventListener('click', function(event) {
+        var div = document.getElementById('rpDiv');
+        if (div.style.transform === 'translateY(-100vh)') { // Use === to compare, not =
+            div.style.transform = 'translateY(0)';
+        } else {
+            div.style.transform = 'translateY(-100vh)';
+        }
+        event.stopPropagation(); // Preventing the click event from bubbling up to the document body
+    });
+    
+    document.body.addEventListener('click', function(event) {
+        var div = document.getElementById('rpDiv');
+        var target = event.target;
+        if (target !== div && !div.contains(target)) { // Check if the clicked element is not the div or a child of the div
+            div.style.transform = 'translateY(-100vh)';
+        }
+    });
+</script>
+
+
+<!-- chapters form  -->
+<script>
+    document.getElementById('showChapters').addEventListener('click', function(event) {
+        var div = document.getElementById('chaptersDiv');
+        if (div.style.transform === 'translateX(-100vw)') {
+            div.style.transform = 'translateX(0)';
+        } else {
+            div.style.transform = 'translateX(-100vw)';
+        }
+        event.stopPropagation(); // Preventing the click event from bubbling up to the document body
+    });
+    
+    document.body.addEventListener('click', function(event) {
+        var div = document.getElementById('chaptersDiv');
+        var target = event.target;
+        if (target !== div && !div.contains(target)) { // Check if the clicked element is not the div or a child of the div
+            div.style.transform = 'translateX(-100vw)';
+        }
+    });
+</script>
+
+
+
+<!-- toggle dark mode  -->
+
+<style>
+    body {
+        transition: background-color 1s, color 1s;
+    }
+
+
+    .checkbox-wrapper-41 {
+    --size: 50px;
+    }
+
+    .checkbox-wrapper-41 input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: var(--size);
+    height: calc(var(--size) / 2);
+    background-color: #000;
+    border: 2px solid #222;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    }
+
+    .checkbox-wrapper-41 input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: calc(var(--size) / 2);
+    height: calc(var(--size) / 2);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0.7);
+    border: 3px solid #222;
+    border-radius: 50% 0 50% 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    }
+
+    .checkbox-wrapper-41 input[type="checkbox"]:checked {
+    background-color: #fff;
+    border-radius: 0 10px 0 10px;
+    }
+
+    .checkbox-wrapper-41 input[type="checkbox"]:checked::before {
+    left: 50%;
+    background-color: #000;
+    border-radius: 0 50% 0 50%;
+    }
+
+
+</style>
+
+
+
+    
+
+
+
+<!-- dark mode script -->
+
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const chapters = document.querySelectorAll('.chapter');
+    const body = document.body;
+
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            body.classList.remove('bg-black', 'text-white');
+            body.classList.add('bg-gray-200', 'text-black');
+            chapters.forEach(chapter => {
+                chapter.classList.remove('bg-gray-300', 'text-gray-900', 'shadow-main/60');
+                chapter.classList.add('bg-gray-700', 'text-gray-200' , 'shadow-black/60');
+            });
+        } else {
+            body.classList.remove('bg-gray-200', 'text-black' );
+            body.classList.add('bg-black', 'text-white' );
+            chapters.forEach(chapter => {
+                chapter.classList.remove('bg-gray-700', 'text-gray-200', 'shadow-black/60');
+                chapter.classList.add('bg-gray-300', 'text-gray-900', 'shadow-main/60');
+            });
+        }
+    });
+</script>
+
+
+
+
+<!-- go to top arrow script -->
+
+<!-- <script>
+window.addEventListener('scroll', function() {
+    var scrollButton = document.getElementById('scrollButton');
+    if (window.scrollY < window.innerHeight * 2 ) {
+        scrollButton.classList.add('hidden');
+    } else {
+        scrollButton.classList.remove('hidden');
+    }
+});
+
+</script> -->
+
+
+  
+  
+
+
+
+
+</html>
