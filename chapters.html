@@ -303,7 +303,7 @@
 
 
     
-            <div class="w-full flex flex-wrap bg-black/30 rounded-b-lg px-0 py-4 justify-center border-t-2 border-main/50 items-center" >
+            <div class="w-full flex flex-wrap bg-black/30 rounded-b-lg px-1.5 py-4 justify-center border-t-2 border-main/50 items-center" >
                 <h1 class="w-1/2 mx-[25%] text-sm sm:text-sm md:text-lg xl:text-xl 2xl:text-2xl tracking-widest border-white/80 mb-4 text-center uppercase text-white ">Comments</h1>
 
                 
@@ -317,7 +317,7 @@
 
             </div>
 
-            <div id="commentSection" class="fixed text-gray-200 overflow-y-auto bottom-0 left-0 w-full h-0 sm:px-[8%] 2xl:px-[12%] bg-gray-900 overflow-hidden duration-300 transition-height z-20" style="box-shadow: 0 0 200px rgb(0, 0, 0), 0 0 200px rgb(0, 0, 0);">
+            <div id="commentSection" class="fixed text-gray-200 overflow-y-auto bottom-0 left-0 w-full h-0 sm:px-[8%] lg:px-[16%] 2xl:px-[20%] bg-gray-900 overflow-hidden duration-300 transition-height z-20" style="box-shadow: 0 0 200px rgb(0, 0, 0), 0 0 200px rgb(0, 0, 0);">
                 <button id="closeButton" class="absolute hidden top-0 right-0 m-4 text-gray-600 hover:text-black focus:outline-none">
                     <i class="bx bx-x p-2 bg-gray-100"></i>
                 </button>
@@ -327,17 +327,18 @@
                     <div class="flex flex-col flex-1 px-3">
                         <div class="flex justify-between w-full mb-1">
                             <p class="font-semibold tracking-widest">Ek Yoe</p>
+                            <p class="font-thin opacity-70 flex items-center">6 <i class="bx bx-comment-detail ml-1"></i></p>
                             <p class="font-thin opacity-70">8hr ago</p>
                         </div>
                         <p class="opacity-90">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem temporibus voluptate eum suscipit fugit!
                         </p>
-                        <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a>
+                        <p class="view-replies cursor-pointer bg-slate-700 w-1/2 text-center mt-1 rounded-md">Reply</p>
                         <!-- Hidden form for replies -->
                         <div class="hidden reply-form  w-full flex-col">
                             <div class="flex flex-col w-full">
                                 <div class="flex shadow-md shadow-main/30 rounded-lg mb-3 p-1">
-                                    <img src="/images/zeltron.jpg" class="w-12 h-12 rounded-xl " alt="">
+                                    <img src="/images/zeltron.jpg" class="w-8 h-8 rounded-xl " alt="">
                                     <div class="flex flex-col flex-1 px-3">
                                         <div class="flex justify-between w-full mb-1">
                                             <p class="font-semibold tracking-widest">zeltron</p>
@@ -351,7 +352,7 @@
                                 </div>
 
                                 <div class="flex shadow-md shadow-main/30 rounded-lg mb-3 p-1">
-                                    <img src="/images/gray.jpg" class="w-12 h-12 rounded-xl " alt="">
+                                    <img src="/images/gray.jpg" class="w-8 h-8 rounded-xl " alt="">
                                     <div class="flex flex-col flex-1 px-3">
                                         <div class="flex justify-between w-full mb-1">
                                             <p class="font-semibold tracking-widest">Gray</p>
@@ -373,54 +374,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full pb-32">
-                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
-                        <img src="/images/zeltron.jpg" class="w-12 h-12 rounded-xl " alt="">
-                        <div class="flex flex-col flex-1 px-3">
-                            <div class="flex justify-between w-full mb-1">
-                                <p class="font-semibold tracking-widest">Zeltron</p>
-                                <p class="font-thin opacity-70">8hr ago</p>
-                            </div>
-                            <p class="opacity-90">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem temporibus voluptate eum suscipit fugit!
-                            </p>
-                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
-    
-                        </div>
-                    </div>
-    
-                    
-                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
-                        <img src="/images/pfp.jpg" class="w-12 h-12 rounded-xl " alt="">
-                        <div class="flex flex-col flex-1 px-3">
-                            <div class="flex justify-between w-full mb-1">
-                                <p class="font-semibold tracking-widest">Tanjiro Kamado</p>
-                                <p class="font-thin opacity-70">2w ago</p>
-                            </div>
-                            <p class="opacity-90">
-                                Lorem ipsum dolor sit amet consect temporibus voluptate eum suscipit fugit!
-                            </p>
-                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
-    
-                        </div>
-                    </div>
-    
-                    <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
-                        <img src="/images/naingMin.jpg" class="w-12 h-12 rounded-xl " alt="">
-                        <div class="flex flex-col flex-1 px-3">
-                            <div class="flex justify-between w-full mb-1">
-                                <p class="font-semibold tracking-widest">Naing Min</p>
-                                <p class="font-thin opacity-70">2w ago</p>
-                            </div>
-                            <p class="opacity-90">
-                                Lorem ipsum dolor sit amet consect temporibus voluptate eum suscipit fugit!
-                            </p>
-                            <!-- <a href="#" class="view-replies bg-slate-700 w-full text-center mt-1 rounded-md">View replies</a> -->
-    
-                        </div>
-                    </div>
 
+
+                <div class="flex shadow-md shadow-main/30 mx-3 p-2 rounded-lg mb-3">
+                    <img src="/images/gray.jpg" class="w-12 h-12 rounded-xl " alt="">
+                    <div class="flex flex-col flex-1 px-3">
+                        <div class="flex justify-between w-full mb-1">
+                            <p class="font-semibold tracking-widest">John Doe</p>
+                            <p class="font-thin opacity-70 flex items-center">0 <i class="bx bx-comment-detail ml-1"></i></p>
+                            <p class="font-thin opacity-70">8hr ago</p>
+                        
+                        </div>
+                        <p class="opacity-90">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolorem temporibus voluptate eum suscipit fugit!
+                        </p>
+                        <p class="view-replies cursor-pointer bg-slate-700 w-1/2 text-center mt-1 rounded-md">Reply</p>
+                        <!-- Hidden form for replies -->
+                        <div class="hidden reply-form  w-full flex-col">
+                            <div class="flex flex-col w-full">
+
+
+
+                                
+                                <div class="w-full flex bg-gray-900 px-2 justify-center">
+                                    <input type="text" name="comment" id="commentInputR" placeholder="Write comment..." class="p-2  mr-2 text-main focus:outline-none my-2 bg-transparent shadow-md shadow-main/50 rounded-lg w-4/5">
+                                    <button id="sendButtonR" class="w-1/5 mr-5" disabled><i class="bx bx-send w-full p-2 py-3 rounded-lg text-center bg-gray-400 hover:bg-gray-600 active:bg-black active:text-white duration-300 shadow-md shadow-main/30 opacity-30"></i></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
 
 
             
@@ -493,7 +478,7 @@
                         const replyForm = this.parentElement.querySelector('.reply-form');
                         replyForm.classList.toggle('hidden');
                         // Change the link text to "Close" when the form is visible, and "View 6 replies" otherwise
-                        this.textContent = replyForm.classList.contains('hidden') ? 'View replies' : 'Hide replies';
+                        this.textContent = replyForm.classList.contains('hidden') ? 'Reply' : 'Close';
                     });
                 });
             </script>
