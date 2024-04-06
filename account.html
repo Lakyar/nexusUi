@@ -213,7 +213,7 @@
                 <button class="tablinks skew-x-3 text-gray-50 text-xl lg:text-2xl rounded-t-lg w-[16.2%] border-t-2 border-slate-700 font-bold py-0.5 md:py-1 bg-slate-700 hover:bg-slate-800" onclick="openClassroom(event, 'bookmark')"><i class="bx bx-bookmark"></i></button>
                 <div class="w-[16.5%] relative">
                     <button class="tablinks skew-x-3 text-gray-50 text-xl lg:text-2xl rounded-t-lg w-full border-t-2 border-slate-700 font-bold py-0.5 md:py-1 bg-slate-700 hover:bg-slate-800 " onclick="openClassroom(event, 'notification')"><i class="bx bx-bell"></i></button>
-                    <p class="absolute top-0 right-1/4 sm:right-1/3 text-main font-semibold">1</p>
+                    <p class="absolute top-0 right-1/4 sm:right-1/3 text-main font-semibold">4</p>
 
                 </div>
 
@@ -382,9 +382,48 @@
                     <img src="images/main_logo2.png" class="absolute w-1/2  opacity-10 -z-10 right-0 top-0" alt="">
 
                     <h1 class="mb-5 border-b-2 border-white/30 text-lg md:text-xl">Notifications</h1>
-                    <div class="flex">
-                        <a href="" class=" text-gray-200 mr-5 underline hover:text-blue-600 active:text-black"> Admin replied your comment.</a>
-                        <p class=" text-gray-400"> 8hr ago</p>
+                    <div class="flex flex-col relative mb-4 bg-gradient-to-t from-green-300/10 to-red-500/0 px-4 py-1 rounded-md backdrop-blur-sm shadow-md shadow-black">
+                        <i class="bx bx-x text-red-300 p-1 absolute top-0 right-0"></i>
+                        <div class="flex w-full justify-between">
+                            <p class=" text-gray-200 mr-5 "><i class="bx bx-select-multiple"></i> Chapter number 31 updated!!</p>
+                            <p class=" text-gray-400 text-xs mr-2"> 8hr ago</p>
+                        </div>
+                        <p class="text-xs font-thin px-4 py-1 opacity-70">
+                            Lorem, ipsum dolor sit len? Inventore, nemo!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col relative mb-4 bg-gradient-to-t from-amber-300/10 to-red-500/0 px-4 py-1 rounded-md backdrop-blur-sm shadow-md shadow-black">
+                        <i class="bx bx-x text-red-300 p-1 absolute top-0 right-0"></i>
+                        <div class="flex w-full justify-between">
+                            <p class=" text-gray-200 mr-5 "><i class="bx bx-error-circle"></i> Your account is about to expire.</p>
+                            <p class=" text-gray-400 text-xs mr-2"> 8hr ago</p>
+                        </div>
+                        <p class="text-xs font-thin px-4 py-1 opacity-70">
+                            Lorem, ipsum dolor sit amet  dolore? Inventore, nemo!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col relative mb-4 bg-gradient-to-t from-green-300/10 to-red-500/0 px-4 py-1 rounded-md backdrop-blur-sm shadow-md shadow-black">
+                        <i class="bx bx-x text-red-300 p-1 absolute top-0 right-0"></i>
+                        <div class="flex w-full justify-between">
+                            <p class=" text-gray-200 mr-5 "><i class="bx bx-select-multiple"></i> Chapter number 31 updated!!</p>
+                            <p class=" text-gray-400 text-xs mr-2"> 8hr ago</p>
+                        </div>
+                        <p class="text-xs font-thin px-4 py-1 opacity-70">
+                            Lorem, ipsum dolor sit amet consec tetur adipi repel len? Inventore, nemo!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col relative mb-4 bg-gradient-to-t from-amber-300/10 to-red-500/0 px-4 py-1 rounded-md backdrop-blur-sm shadow-md shadow-black">
+                        <i class="bx bx-x text-red-300 p-1 absolute top-0 right-0"></i>
+                        <div class="flex w-full justify-between">
+                            <p class=" text-gray-200 mr-5 "><i class="bx bx-error-circle"></i> Your account is about to expire.</p>
+                            <p class=" text-gray-400 text-xs mr-2"> 8hr ago</p>
+                        </div>
+                        <p class="text-xs font-thin px-4 py-1 opacity-70">
+                            Lorem, ipsum dolor sit amet consec tetur adipi repel  laborum modi dolore? Inventore, nemo!
+                        </p>
                     </div>
 
                 </div>
@@ -607,7 +646,7 @@
     
         // Trigger click event on the "UserProfile" button by default
         window.onload = function() {
-            document.getElementsByClassName('tablinks')[2].click();
+            document.getElementsByClassName('tablinks')[5].click();
         };
     </script>
 
